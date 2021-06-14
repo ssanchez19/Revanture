@@ -1,0 +1,122 @@
+package main;
+import java.util.Scanner;
+
+public class Converter {
+ public static void main (String [] args ) {
+	//creating the menu selection variable 
+	// char userinput;
+	 int menuSelection = 0;
+	 double units;
+	
+	 
+		 while (menuSelection !=4 ) {
+			System.out.println("Please select one of the following options:");
+			System.out.println("1. Cups to Teaspoons");
+		 	System.out.println("2. Miles to Kilometers");
+		 	System.out.println("3. US Gallons to Imperial Gallons");
+		 	System.out.println("4. Quit");
+		 
+		
+		 	System.out.println(" Please enter your selection: ");
+		 	Scanner scanner  = new Scanner (System.in);
+		
+		 
+		
+		 	menuSelection = scanner.nextInt();
+			 
+			 
+	
+			if (menuSelection == 1) {
+				System.out.println(" \n You've selected Cups to Teaspoons conversion. \n ");
+		
+			
+				System.out.println(" How many units would you like to convert? \n ");
+				units = scanner.nextDouble();
+			
+				if (units != 0) {
+				
+			
+			
+					units = units * 48;
+					System.out.println (" This is the unit coversion: " + units);
+					//error checking	System.out.println("error");
+					
+					
+			}
+				
+				else {
+					System.out.println(" Please Try again. Enter a valid unit for conversion. ");
+					continue;
+			}
+				
+			
+			
+		}
+			
+			else if (menuSelection == 2) {
+				System.out.println(" You've selected Miles to Kilometers conversion. ");
+				
+				
+				System.out.println(" How many units would you like to convert? ");
+				units = scanner.nextDouble();
+				
+				if (units != 0) {
+					
+				
+				
+					units = units / 1.069;
+					System.out.println (" This is the unit coversion: " + units);
+					//error checking System.out.println("error");
+					break;
+					
+					
+				}
+				else {
+					System.out.println(" Please Try again. Enter a valid unit for conversion. ");
+					continue;
+				}
+			
+				
+			
+				
+			}
+		
+			else if (menuSelection == 3) {
+				System.out.println(" You've selected US Gallons to Imperial Gallons conversion. ");
+				
+				
+				System.out.println(" How many units would you like to convert? ");
+				units = scanner.nextDouble();
+				
+				if (units != 0) {
+					
+					units = units / 1.201;
+					System.out.println (" This is the unit coversion: " + units);
+					//error checking System.out.println("error");
+					break;
+					
+					}
+			}
+			else if (menuSelection == 4) {
+				System.out.println(" Thank you for participating! ");
+					break;
+					
+					
+			}
+				
+				else {
+					System.out.println(" Please try again and enter a valid selection. ");
+					continue;
+				
+				}
+		
+			
+			 
+		scanner.close();
+		
+		
+		}
+	 }
+	 
+
+	 }
