@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+
+		<property name="hibernate.connection.driver_class">
+			org.postgresql.Driver
+		</property>
+
+		<property name="hibernate.dialect">
+			org.hibernate.dialect.PostgreSQLDialect
+		</property>
+
+		<property name="hibernate.connection.url">
+			jdbc:postgresql://revdatabase-1.cbvqj8oumpnc.us-east-2.rds.amazonaws.com/postgres
+		</property>
+
+		<property name="hibernate.connection.username">
+			ssanchez
+		</property>
+
+		<property name="hibernate.connection.password">
+			isabella7
+		</property>
+
+		<!-- Optional Properties -->
+		<property name="show_sql">
+			true
+		</property>
+
+		<property name="hbm2ddl.auto">
+			update
+		</property>
+
+		<!-- Class Mappings -->
+
+		<mapping resource="Reimbursement.hbm.xml" />
+		<mapping class="dev.sanchez.models.Reimbursement" />
+		<mapping class="dev.sanchez.models.Supervisor" />
+		<mapping class="dev.sanchez.models.BenefitCoordinator" />
+		<mapping class="dev.sanchez.models.DeptHead" />
+
+
+	</session-factory>
+</hibernate-configuration>

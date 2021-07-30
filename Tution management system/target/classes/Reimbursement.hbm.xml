@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<!-- Any attributes here apply to the actual
+	SQL table. If you don't include them, then the name
+	will be assumed based on the field name in the Class -->
+	<class name="dev.sanchez.models.Reimbursement" table="reimbursements">
+	
+		<!-- 'name' attribute corresponds to the Java
+		field name. 'type' will let Hibernate know what
+		to convert the SQL type into for Java. 'column'
+		is to specify a column name in the SQL table -->
+	
+		<!-- id tag is for your Primary Key -->
+		<id name="reimbursement_id" type="int" column="reimbursement_id" >
+			<generator class="identity" />
+		</id>
+		
+		
+	
+		<property name="name" type="string" not-null= "false" />
+		<property name="description" type="string" not-null= "false"/>
+		<property name="date_submitted" type="long" not-null= "false" />
+		<property name="location" type="string" not-null= "false"/>
+		<property name="event_type" type="string" not-null= "false"/>
+		<property name="claim" type="double" not-null= "false" />
+		<property name="approval_message" type="string" not-null= "false"/>
+		<property name="grade_format" type="string" not-null= "false" />
+	
+	</class>
+	<class name="dev.sanchez.models.Supervisor" table="supervisor">
+	
+		<!-- 'name' attribute corresponds to the Java
+		field name. 'type' will let Hibernate know what
+		to convert the SQL type into for Java. 'column'
+		is to specify a column name in the SQL table -->
+	
+		<!-- id tag is for your Primary Key -->
+		<id name="supervisor_id" type="int" column="supervisor_id" >
+			<generator class="identity" />
+		</id>
+		
+		
+		<property name="name" type="string" not-null= "true" />
+		<property name="description" type="string" not-null= "true"/>
+		<property name="date_submitted" type="long" not-null= "true" />
+		<property name="location" type="string" not-null= "true"/>
+		<property name="event_type" type="string" not-null= "true"/>
+		<property name="claim" type="double" not-null= "true" />
+		<property name="approval_message" type="string" not-null= "true"/>
+		<property name="grade_format" type="string" not-null= "true" />
+		
+		
+			
+	
+	</class>
+	
+		<class name="dev.sanchez.models.BenefitCoordinator" table="benefitcoordinator">
+	
+		<!-- 'name' attribute corresponds to the Java
+		field name. 'type' will let Hibernate know what
+		to convert the SQL type into for Java. 'column'
+		is to specify a column name in the SQL table -->
+	
+		<!-- id tag is for your Primary Key -->
+		<id name="benefitco_id" type="int" column="supervisor_id" >
+			<generator class="identity" />
+		</id>
+		
+		
+		<property name="name" type="string" not-null= "true" />
+		<property name="description" type="string" not-null= "true"/>
+		<property name="date_submitted" type="long" not-null= "true" />
+		<property name="location" type="string" not-null= "true"/>
+		<property name="event_type" type="string" not-null= "true"/>
+		<property name="claim" type="double" not-null= "true" />
+		<property name="approval_message" type="string" not-null= "true"/>
+		<property name="grade_format" type="string" not-null= "true" />
+		
+		
+			
+	
+	</class>
+		<class name="dev.sanchez.models.DeptHead" table="depthead">
+	
+		<!-- 'name' attribute corresponds to the Java
+		field name. 'type' will let Hibernate know what
+		to convert the SQL type into for Java. 'column'
+		is to specify a column name in the SQL table -->
+	
+		<!-- id tag is for your Primary Key -->
+		<id name="depthead_id" type="int" column="supervisor_id" >
+			<generator class="identity" />
+		</id>
+		
+		
+		<property name="name" type="string" not-null= "true" />
+		<property name="description" type="string" not-null= "true"/>
+		<property name="date_submitted" type="long" not-null= "true" />
+		<property name="location" type="string" not-null= "true"/>
+		<property name="event_type" type="string" not-null= "true"/>
+		<property name="claim" type="double" not-null= "true" />
+		<property name="approval_message" type="string" not-null= "true"/>
+		<property name="grade_format" type="string" not-null= "true" />
+		
+		
+			
+	
+	</class>
+</hibernate-mapping>
